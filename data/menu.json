@@ -2,8 +2,8 @@
   {
     "category": "noodles",
     "price": 9500,
-    "soldOut": false,
     "image": "/images/bowl.svg",
+    "soldOut": true,
     "name": {
       "ko": "잔치국수",
       "en": "Anchovy Broth Noodles",
@@ -20,8 +20,8 @@
   {
     "category": "sides",
     "price": 6000,
-    "soldOut": false,
     "image": "/images/dumplings.svg",
+    "soldOut": false,
     "name": {
       "ko": "군만두",
       "en": "Pan-Fried Dumplings",
@@ -38,8 +38,8 @@
   {
     "category": "drinks",
     "price": 4000,
-    "soldOut": true,
     "image": "/images/tea.svg",
+    "soldOut": true,
     "name": {
       "ko": "유자차",
       "en": "Yuja Tea",
