@@ -1,0 +1,56 @@
+[
+  {
+    "category": "noodles",
+    "price": 9500,
+    "soldOut": false,
+    "image": "/images/bowl.svg",
+    "name": {
+      "ko": "잔치국수",
+      "en": "Anchovy Broth Noodles",
+      "ja": "煮干しだしの温麺",
+      "zh-CN": "鳀鱼汤面"
+    },
+    "description": {
+      "ko": "멸치 육수에 소면과 채소를 담았습니다.",
+      "en": "Thin wheat noodles and vegetables in anchovy broth.",
+      "ja": "煮干しだしに細麺と野菜を合わせました。",
+      "zh-CN": "细面和蔬菜搭配鳀鱼高汤。"
+    }
+  },
+  {
+    "category": "sides",
+    "price": 6000,
+    "soldOut": false,
+    "image": "/images/dumplings.svg",
+    "name": {
+      "ko": "군만두",
+      "en": "Pan-Fried Dumplings",
+      "ja": "焼き餃子",
+      "zh-CN": "煎饺"
+    },
+    "description": {
+      "ko": "바삭하게 구운 만두입니다.",
+      "en": "Dumplings pan-fried until crisp.",
+      "ja": "カリッと焼き上げた餃子です。",
+      "zh-CN": "煎至金黄酥脆的饺子。"
+    }
+  },
+  {
+    "category": "drinks",
+    "price": 4000,
+    "soldOut": true,
+    "image": "/images/tea.svg",
+    "name": {
+      "ko": "유자차",
+      "en": "Yuja Tea",
+      "ja": "ゆず茶",
+      "zh-CN": "柚子茶"
+    },
+    "description": {
+      "ko": "향긋한 유자청으로 만든 차입니다.",
+      "en": "A fragrant Korean citrus tea.",
+      "ja": "香り豊かなゆず茶です。",
+      "zh-CN": "香气清新的韩式柚子茶。"
+    }
+  }
+]

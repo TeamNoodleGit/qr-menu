@@ -1,0 +1,75 @@
+media:
+  input: images
+  output: /images
+  extensions: [jpg, jpeg, png, webp, avif, svg]
+
+content:
+  - name: menu
+    label: 메뉴판
+    type: file
+    path: data/menu.json
+    format: json
+    list: true
+    fields:
+      - name: category
+        label: 카테고리
+        type: select
+        required: true
+        options:
+          values:
+            - { name: noodles, label: 면 요리 }
+            - { name: sides, label: 곁들임 }
+            - { name: drinks, label: 음료 }
+      - name: price
+        label: 가격 (원)
+        type: number
+        required: true
+        options:
+          min: 0
+      - name: image
+        label: 메뉴 사진
+        type: image
+      - name: soldOut
+        label: 품절
+        type: boolean
+        default: false
+      - name: name
+        label: 메뉴명
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: string
+            required: true
+          - name: en
+            label: 영어
+            type: string
+            required: true
+          - name: ja
+            label: 일본어
+            type: string
+            required: true
+          - name: zh-CN
+            label: 중국어 간체
+            type: string
+            required: true
+      - name: description
+        label: 설명
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: text
+            required: true
+          - name: en
+            label: 영어
+            type: text
+            required: true
+          - name: ja
+            label: 일본어
+            type: text
+            required: true
+          - name: zh-CN
+            label: 중국어 간체
+            type: text
+            required: true
