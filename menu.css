@@ -26,3 +26,8 @@ button[aria-pressed="true"] { background: #203a30; border-color: #203a30; color:
 .details p { margin: .5rem 0; line-height: 1.5; }
 .category { color: #536448; font-size: .85rem; font-weight: 700; }
 .badge { display: inline-block; margin-inline-start: .6rem; padding: .2rem .55rem; background: #f8e1da; color: #812e21; border-radius: 1rem; font-size: .85rem; font-weight: 700; }
+
+.languages { display: flex; flex-wrap: wrap; gap: .35rem; }
+.languages button { display: grid; place-items: center; min-width: 44px; padding: 0; background: transparent; border-color: transparent; }
+.languages button[aria-pressed="true"] { border-color: #fff8e9; background: #ffffff20; }
+.languages img { display: block; border-radius: 2px; }

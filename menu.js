@@ -5,7 +5,28 @@ const copy = {
   'zh-CN': ['菜单', '暖心面食与小菜', '语言', '分类', '全部', '售罄', '暂无菜单。', '无法加载菜单，请刷新页面。', '面食', '小菜', '饮品'],
 };
 const categories = ['noodles', 'sides', 'drinks'];
-const language = document.querySelector('#language');
+const languages = document.querySelector('#language');
+const languageButtons = [...languages.querySelectorAll('button')];
+const languageKey = 'qr-menu.language';
+const defaultLocale = 'ko';
+
+function preferredLocale() {
+  try {
+    const saved = localStorage.getItem(languageKey);
+    if (Object.hasOwn(copy, saved)) return saved;
+  } catch {
+    // Browsing still works when storage is unavailable.
+  }
+
+  for (const preference of navigator.languages?.length ? navigator.languages : [navigator.language]) {
+    const base = preference?.toLowerCase().split('-')[0];
+    if (base === 'zh') return 'zh-CN';
+    if (Object.hasOwn(copy, base)) return base;
+  }
+  return defaultLocale;
+}
+
+let locale = preferredLocale();
 const filters = document.querySelector('#filters');
 const menu = document.querySelector('#menu');
 const status = document.querySelector('#status');
@@ -21,13 +42,15 @@ function element(tag, value, className) {
 }
 
 function render() {
-  const locale = language.value;
   const [title, intro, label, categoryLabel, all, soldOut, empty, error, ...categoryNames] = copy[locale];
   document.documentElement.lang = locale;
   document.title = 'Noodle Kitchen · ' + title;
   document.querySelector('#title').textContent = title;
   document.querySelector('#intro').textContent = intro;
-  document.querySelector('#language-label').textContent = label;
+  languages.setAttribute('aria-label', label);
+  for (const button of languageButtons) {
+    button.setAttribute('aria-pressed', String(button.dataset.locale === locale));
+  }
   filters.setAttribute('aria-label', categoryLabel);
   filters.replaceChildren();
   menu.replaceChildren();
@@ -83,7 +106,17 @@ function render() {
   }
 }
 
-language.addEventListener('change', render);
+for (const button of languageButtons) {
+  button.addEventListener('click', () => {
+    locale = button.dataset.locale;
+    try {
+      localStorage.setItem(languageKey, locale);
+    } catch {
+      // Keep the selection for this visit.
+    }
+    render();
+  });
+}
 render();
 try {
   const response = await fetch(new URL('./data/menu.json', import.meta.url), { cache: 'no-cache' });
