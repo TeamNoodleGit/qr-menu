@@ -1,14 +1,14 @@
 [
   {
     "category": "noodles",
-    "price": 9500,
+    "price": 99999999999,
     "image": "/images/bowl.svg",
     "soldOut": true,
     "name": {
-      "ko": "잔치국수",
-      "en": "Anchovy Broth Noodles",
-      "ja": "煮干しだしの温麺",
-      "zh-CN": "鳀鱼汤面"
+      "ko": "미스타 도다리",
+      "en": "mr. dodari",
+      "ja": "대충 일본어",
+      "zh-CN": "대충 중국어"
     },
     "description": {
       "ko": "멸치 육수에 소면과 채소를 담았습니다.",
