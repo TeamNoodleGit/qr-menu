@@ -16,5 +16,23 @@
       "ja": "煮干しだしに細麺と野菜を合わせました。",
       "zh-CN": "细面和蔬菜搭配鳀鱼高汤。"
     }
+  },
+  {
+    "category": "noodles",
+    "price": 18000,
+    "image": "/images/bowl.svg",
+    "soldOut": false,
+    "name": {
+      "ko": "김찌",
+      "en": "영어 김찌",
+      "ja": "일본어 김찌",
+      "zh-CN": "중국어 김찌"
+    },
+    "description": {
+      "ko": "한국어 설명",
+      "en": "영어 설명",
+      "ja": "일본어 설명",
+      "zh-CN": "중국어 설명"
+    }
   }
 ]
