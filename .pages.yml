@@ -1,3 +1,7 @@
+settings:
+  commit:
+    identity: app
+
 media:
   input: images
   output: /images
