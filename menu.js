@@ -44,7 +44,7 @@ function element(tag, value, className) {
 function render() {
   const [title, intro, label, categoryLabel, all, soldOut, empty, error, ...categoryNames] = copy[locale];
   document.documentElement.lang = locale;
-  document.title = 'Noodle Kitchen · ' + title;
+  document.title = '현종키친 · ' + title;
   document.querySelector('#title').textContent = title;
   document.querySelector('#intro').textContent = intro;
   languages.setAttribute('aria-label', label);
