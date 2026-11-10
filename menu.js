@@ -51,6 +51,26 @@ let locale = preferredLocale();
 const filters = document.querySelector('#filters');
 const menu = document.querySelector('#menu');
 const status = document.querySelector('#status');
+const productDialog = document.querySelector('#product-dialog');
+let backdropPress = false;
+
+function isOutsideDialog(event) {
+  const bounds = productDialog.getBoundingClientRect();
+  return event.clientX < bounds.left || event.clientX > bounds.right
+    || event.clientY < bounds.top || event.clientY > bounds.bottom;
+}
+
+productDialog.addEventListener('pointerdown', event => {
+  backdropPress = event.target === productDialog && isOutsideDialog(event);
+});
+productDialog.addEventListener('click', event => {
+  if (backdropPress && event.target === productDialog && isOutsideDialog(event)) {
+    productDialog.close();
+  }
+  backdropPress = false;
+});
+productDialog.addEventListener('close', () => { backdropPress = false; });
+
 let active = '';
 let items = [];
 let state = 'loading';
