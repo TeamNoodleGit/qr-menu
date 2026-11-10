@@ -1,33 +1,15 @@
 {
-    "name":  {
-                 "ko":  "서비의 전통 맛 젓갈",
-                 "en":  "서비의 전통 맛 젓갈",
-                 "ja":  "서비의 전통 맛 젓갈",
-                 "zh-CN":  "서비의 전통 맛 젓갈"
-             },
-    "intro":  {
-                  "ko":  "젓갈과 반찬",
-                  "en":  "Salted seafood and side dishes",
-                  "ja":  "塩辛とお惣菜",
-                  "zh-CN":  "海鲜酱与小菜"
-              },
-    "address":  {
-                    "ko":  "",
-                    "en":  "",
-                    "ja":  "",
-                    "zh-CN":  ""
-                },
-    "hours":  {
-                  "ko":  "",
-                  "en":  "",
-                  "ja":  "",
-                  "zh-CN":  ""
-              },
-    "notice":  {
-                   "ko":  "",
-                   "en":  "",
-                   "ja":  "",
-                   "zh-CN":  ""
-               },
-    "phone":  ""
+  "name": {
+    "ko": "서비의 전통 맛 젓갈",
+    "en": "서비의 전통 맛 젓갈",
+    "ja": "서비의 전통 맛 젓갈",
+    "zh-CN": "서비의 전통 맛 젓갈"
+  },
+  "intro": {
+    "ko": "젓갈과 반찬",
+    "en": "Salted seafood and side dishes",
+    "ja": "塩辛とお惣菜",
+    "zh-CN": "海鲜酱与小菜"
+  },
+  "phone": "0212345678"
 }
