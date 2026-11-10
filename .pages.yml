@@ -26,6 +26,22 @@ content:
             - { name: kimchi, label: 김치류 }
             - { name: noodles, label: 면 요리 (기존 데이터) }
             - { name: drinks, label: 음료 (기존 데이터) }
+      - name: name
+        label: 메뉴명
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: string
+          - name: en
+            label: 영어
+            type: string
+          - name: ja
+            label: 일본어
+            type: string
+          - name: zh-CN
+            label: 중국어 간체
+            type: string
       - name: prices
         label: 중량별 가격 (비워두면 가격 문의)
         type: object
@@ -58,22 +74,6 @@ content:
         label: 품절
         type: boolean
         default: false
-      - name: name
-        label: 메뉴명
-        type: object
-        fields:
-          - name: ko
-            label: 한국어
-            type: string
-          - name: en
-            label: 영어
-            type: string
-          - name: ja
-            label: 일본어
-            type: string
-          - name: zh-CN
-            label: 중국어 간체
-            type: string
       - name: description
         label: 설명
         type: object
