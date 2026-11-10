@@ -21,13 +21,34 @@ content:
         required: true
         options:
           values:
-            - { name: noodles, label: 면 요리 }
-            - { name: sides, label: 곁들임 }
-            - { name: drinks, label: 음료 }
+            - { name: jeotgal, label: 젓갈류 }
+            - { name: sides, label: 반찬류 }
+            - { name: kimchi, label: 김치류 }
+            - { name: noodles, label: 면 요리 (기존 데이터) }
+            - { name: drinks, label: 음료 (기존 데이터) }
+      - name: prices
+        label: 중량별 가격 (비워두면 가격 문의)
+        type: object
+        list: true
+        fields:
+          - name: weight
+            label: 중량
+            type: string
+            required: true
+          - name: price
+            label: 가격 (원)
+            type: number
+            required: true
+            options:
+              min: 0
+          - name: maxPrice
+            label: 최고 가격 (가격 범위가 있을 때만 입력)
+            type: number
+            options:
+              min: 0
       - name: price
-        label: 가격 (원)
+        label: 단일 가격 (중량별 가격이 없을 때 사용)
         type: number
-        required: true
         options:
           min: 0
       - name: image
@@ -44,19 +65,15 @@ content:
           - name: ko
             label: 한국어
             type: string
-            required: true
           - name: en
             label: 영어
             type: string
-            required: true
           - name: ja
             label: 일본어
             type: string
-            required: true
           - name: zh-CN
             label: 중국어 간체
             type: string
-            required: true
       - name: description
         label: 설명
         type: object
@@ -64,16 +81,118 @@ content:
           - name: ko
             label: 한국어
             type: text
-            required: true
           - name: en
             label: 영어
             type: text
-            required: true
           - name: ja
             label: 일본어
             type: text
-            required: true
           - name: zh-CN
             label: 중국어 간체
             type: text
-            required: true
+      - name: origin
+        label: 원산지
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: string
+          - name: en
+            label: 영어
+            type: string
+          - name: ja
+            label: 일본어
+            type: string
+          - name: zh-CN
+            label: 중국어 간체
+            type: string
+
+  - name: store
+    label: 가게 정보
+    type: file
+    path: data/store.json
+    format: json
+    fields:
+      - name: name
+        label: 가게 이름
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: string
+          - name: en
+            label: 영어
+            type: string
+          - name: ja
+            label: 일본어
+            type: string
+          - name: zh-CN
+            label: 중국어 간체
+            type: string
+      - name: intro
+        label: 소개 문구
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: text
+          - name: en
+            label: 영어
+            type: text
+          - name: ja
+            label: 일본어
+            type: text
+          - name: zh-CN
+            label: 중국어 간체
+            type: text
+      - name: address
+        label: 주소
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: text
+          - name: en
+            label: 영어
+            type: text
+          - name: ja
+            label: 일본어
+            type: text
+          - name: zh-CN
+            label: 중국어 간체
+            type: text
+      - name: hours
+        label: 영업시간 및 휴무
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: text
+          - name: en
+            label: 영어
+            type: text
+          - name: ja
+            label: 일본어
+            type: text
+          - name: zh-CN
+            label: 중국어 간체
+            type: text
+      - name: notice
+        label: 안내 및 공지
+        type: object
+        fields:
+          - name: ko
+            label: 한국어
+            type: text
+          - name: en
+            label: 영어
+            type: text
+          - name: ja
+            label: 일본어
+            type: text
+          - name: zh-CN
+            label: 중국어 간체
+            type: text
+      - name: phone
+        label: 전화번호
+        type: string

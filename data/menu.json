@@ -1,38 +1,775 @@
 [
   {
-    "category": "drinks",
-    "price": 999999999,
-    "image": "/images/PICT0053.jpg",
-    "soldOut": true,
+    "category": "jeotgal",
     "name": {
-      "ko": "미스타 도다리",
-      "en": "mr. dodari",
-      "ja": "대충 일본어",
-      "zh-CN": "대충 중국어"
+      "ko": "낙지젓갈",
+      "en": "Seasoned octopus",
+      "ja": "テナガダコの塩辛",
+      "zh-CN": "调味长腕章鱼酱"
     },
     "description": {
-      "ko": "멸치 육수에 소면과 채소를 담았습니다.",
-      "en": "Thin wheat noodles and vegetables in anchovy broth.",
-      "ja": "煮干しだしに細麺と野菜を合わせました。",
-      "zh-CN": "细面和蔬菜搭配鳀鱼高汤。"
-    }
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 24000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 12000,
+        "maxPrice": null
+      }
+    ]
   },
   {
-    "category": "noodles",
-    "price": 18000,
-    "image": "/images/bowl.svg",
-    "soldOut": false,
+    "category": "jeotgal",
     "name": {
-      "ko": "김찌",
-      "en": "영어 김찌",
-      "ja": "일본어 김찌",
-      "zh-CN": "중국어 김찌"
+      "ko": "오징어젓갈",
+      "en": "Seasoned squid",
+      "ja": "イカの塩辛",
+      "zh-CN": "调味鱿鱼酱"
     },
     "description": {
-      "ko": "한국어 설명",
-      "en": "영어 설명",
-      "ja": "일본어 설명",
-      "zh-CN": "중국어 설명"
-    }
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 12000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 6000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "창란젓갈",
+      "en": "Seasoned pollock intestines",
+      "ja": "スケトウダラの内臓の塩辛",
+      "zh-CN": "调味明太鱼肠酱"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "미국산",
+      "en": "USA",
+      "ja": "アメリカ産",
+      "zh-CN": "美国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 26000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 13000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "명란젓",
+      "en": "Salted pollock roe",
+      "ja": "明太子",
+      "zh-CN": "盐渍明太鱼籽"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "러시아/미국산",
+      "en": "Russia / USA",
+      "ja": "ロシア・アメリカ産",
+      "zh-CN": "俄罗斯／美国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 13000,
+        "maxPrice": 14000
+      },
+      {
+        "weight": "500g",
+        "price": 6500,
+        "maxPrice": 7000
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "꼴뚜기젓",
+      "en": "Salted baby squid",
+      "ja": "小イカの塩辛",
+      "zh-CN": "盐渍小鱿鱼"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 18000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 9000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "황석어젓",
+      "en": "Salted yellow croaker",
+      "ja": "キグチの塩辛",
+      "zh-CN": "盐渍小黄鱼"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 20000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 10000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "씨앗젓갈",
+      "en": "Seed and seafood mix",
+      "ja": "種入り海鮮塩辛",
+      "zh-CN": "籽仁海鲜酱"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "수입산",
+      "en": "Imported",
+      "ja": "輸入品",
+      "zh-CN": "进口"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 20000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 10000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "비빔낙지",
+      "en": "Spicy octopus mix",
+      "ja": "和えダコ",
+      "zh-CN": "凉拌长腕章鱼"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 22000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 11000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "명태초무침",
+      "en": "Sweet and sour pollock",
+      "ja": "スケトウダラの甘酢和え",
+      "zh-CN": "酸甜凉拌明太鱼"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "러시아산",
+      "en": "Russia",
+      "ja": "ロシア産",
+      "zh-CN": "俄罗斯"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 20000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 10000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "갈치쌈장",
+      "en": "Hairtail ssam sauce",
+      "ja": "タチウオのサムジャン",
+      "zh-CN": "带鱼包饭酱"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 14000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 7000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "멍게젓",
+      "en": "Salted sea squirt",
+      "ja": "ホヤの塩辛",
+      "zh-CN": "盐渍海鞘"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 38000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 19000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "굴젓",
+      "en": "Salted oysters",
+      "ja": "牡蠣の塩辛",
+      "zh-CN": "盐渍牡蛎"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 22000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 11000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "jeotgal",
+    "name": {
+      "ko": "조개젓",
+      "en": "Salted clams",
+      "ja": "貝の塩辛",
+      "zh-CN": "盐渍贝肉"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 25000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 12500,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "양념깻잎",
+      "en": "Spicy perilla leaves",
+      "ja": "えごまの葉の辛味和え",
+      "zh-CN": "辣拌苏子叶"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 10000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 5000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "간장깻잎",
+      "en": "Soy-marinated perilla leaves",
+      "ja": "えごまの葉の醤油漬け",
+      "zh-CN": "酱油腌苏子叶"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": []
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "된장깻잎",
+      "en": "Soybean paste perilla leaves",
+      "ja": "えごまの葉の味噌漬け",
+      "zh-CN": "大酱腌苏子叶"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": []
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "고들빼기",
+      "en": "Korean lettuce kimchi",
+      "ja": "コドルペギキムチ",
+      "zh-CN": "苦苣泡菜"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 12000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 6000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "더덕무침",
+      "en": "Seasoned deodeok root",
+      "ja": "ツルニンジンの和え物",
+      "zh-CN": "凉拌沙参"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": []
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "말랭이무침",
+      "en": "Seasoned dried radish",
+      "ja": "切り干し大根の和え物",
+      "zh-CN": "凉拌萝卜干"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "중국산",
+      "en": "China",
+      "ja": "中国産",
+      "zh-CN": "中国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 10000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 5000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "sides",
+    "name": {
+      "ko": "고추무침",
+      "en": "Seasoned chili peppers",
+      "ja": "唐辛子の和え物",
+      "zh-CN": "凉拌辣椒"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": []
+  },
+  {
+    "category": "kimchi",
+    "name": {
+      "ko": "김치",
+      "en": "Kimchi",
+      "ja": "キムチ",
+      "zh-CN": "泡菜"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": []
+  },
+  {
+    "category": "kimchi",
+    "name": {
+      "ko": "배추김치",
+      "en": "Napa cabbage kimchi",
+      "ja": "白菜キムチ",
+      "zh-CN": "白菜泡菜"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 10000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 5000,
+        "maxPrice": null
+      }
+    ]
+  },
+  {
+    "category": "kimchi",
+    "name": {
+      "ko": "파김치",
+      "en": "Green onion kimchi",
+      "ja": "ねぎキムチ",
+      "zh-CN": "葱泡菜"
+    },
+    "description": {
+      "ko": "",
+      "en": "",
+      "ja": "",
+      "zh-CN": ""
+    },
+    "origin": {
+      "ko": "국내산",
+      "en": "Korea",
+      "ja": "韓国産",
+      "zh-CN": "韩国"
+    },
+    "image": "",
+    "soldOut": false,
+    "price": null,
+    "prices": [
+      {
+        "weight": "1kg",
+        "price": 15000,
+        "maxPrice": null
+      },
+      {
+        "weight": "500g",
+        "price": 8000,
+        "maxPrice": null
+      }
+    ]
   }
 ]
