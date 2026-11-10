@@ -17,6 +17,12 @@ const infoLabels = {
   ja: ['店舗情報', '住所', '営業時間・定休日', '電話', 'お知らせ', '価格はお問い合わせください', '原産地'],
   'zh-CN': ['店铺信息', '地址', '营业时间及休息日', '电话', '公告', '价格请咨询', '原产地'],
 };
+const uiLabels = {
+  ko: ['자세히 보기', '닫기', '메뉴로 돌아가기', '가게 정보가 아직 등록되지 않았습니다.'],
+  en: ['View details', 'Close', 'Back to menu', 'Store information has not been added yet.'],
+  ja: ['詳細を見る', '閉じる', 'メニューに戻る', '店舗情報はまだ登録されていません。'],
+  'zh-CN': ['查看详情', '关闭', '返回菜单', '店铺信息尚未填写。'],
+};
 let store = {};
 const localized = value => typeof value === 'string' ? value : value?.[locale] || value?.ko || '';
 
@@ -66,6 +72,7 @@ function render() {
   renderStore();
   document.querySelector('#title').textContent = title;
   document.querySelector('#intro').textContent = localized(store.intro);
+  renderPage();
   languages.setAttribute('aria-label', label);
   for (const button of languageButtons) {
     button.setAttribute('aria-pressed', String(button.dataset.locale === locale));
@@ -143,6 +150,20 @@ function render() {
       }
       if (item.soldOut) details.append(element('span', soldOut, 'badge'));
       article.append(details);
+      const open = element('button', uiLabels[locale][0], 'card-open');
+      open.type = 'button';
+      open.setAttribute('aria-label', name + ' · ' + uiLabels[locale][0]);
+      open.setAttribute('aria-haspopup', 'dialog');
+      open.addEventListener('click', () => {
+        const detail = article.cloneNode(true);
+        detail.querySelector('.card-open').remove();
+        detail.className = 'detail-card';
+        detail.querySelector('h2').id = 'product-title';
+        document.querySelector('#product-detail').replaceChildren(detail);
+        document.querySelector('#close-dialog').setAttribute('aria-label', uiLabels[locale][1]);
+        document.querySelector('#product-dialog').showModal();
+      });
+      article.append(open);
       menu.append(article);
     }
   }
@@ -158,11 +179,33 @@ function renderStore() {
     const value = localized(store[key]);
     if (!value.trim()) continue;
     const row = element('div', '', 'store-row');
-    row.append(element('h3', labels[index]), element('p', value));
+    const content = element('p', value);
+    if (key === 'phone' && /^[+0-9()\s-]+$/.test(value)) {
+      const call = element('a', value);
+      call.href = 'tel:' + value.replace(/[^+0-9]/g, '');
+      content.replaceChildren(call);
+    }
+    row.append(element('h3', labels[index]), content);
     section.append(row);
   }
-  section.hidden = section.children.length === 1;
+  if (section.children.length === 1) section.append(element('p', uiLabels[locale][3]));
 }
+
+function renderPage() {
+  const isStore = location.hash === '#store';
+  document.querySelector('#title').textContent = isStore ? infoLabels[locale][0] : copy[locale][0];
+  document.querySelector('#store').hidden = !isStore;
+  document.querySelector('#back-link').hidden = !isStore;
+  document.querySelector('#back-link').textContent = uiLabels[locale][2];
+  document.querySelector('#store-link').textContent = infoLabels[locale][0];
+  filters.hidden = isStore;
+  menu.hidden = isStore;
+  status.hidden = isStore;
+}
+window.addEventListener('hashchange', () => {
+  renderPage();
+  window.scrollTo({ top: 0, behavior: 'instant' });
+});
 
 async function loadStore() {
   try {

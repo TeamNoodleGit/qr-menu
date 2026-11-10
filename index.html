@@ -18,6 +18,7 @@
           <button type="button" data-locale="zh-CN" lang="zh-CN" aria-label="简体中文" title="简体中文" aria-pressed="false"><img src="./flags/zh-CN.svg" alt="" width="27" height="18"></button>
         </div>
       </div>
+      <a class="store-link" id="store-link" href="#store">가게 정보</a>
       <h1 id="title">메뉴</h1>
       <p id="intro">젓갈과 반찬</p>
     </div>
@@ -26,8 +27,13 @@
     <nav id="filters" aria-label="카테고리"></nav>
     <p id="status" role="status"></p>
     <div id="menu" class="grid"></div>
+    <a class="back-link" id="back-link" href="#menu" hidden>메뉴로 돌아가기</a>
     <section id="store" class="store" hidden></section>
     <noscript>JavaScript를 켜면 메뉴를 볼 수 있습니다. Enable JavaScript to view the menu.</noscript>
   </main>
+  <dialog id="product-dialog" aria-labelledby="product-title">
+    <form method="dialog"><button id="close-dialog" class="close-dialog" aria-label="닫기">×</button></form>
+    <div id="product-detail"></div>
+  </dialog>
 </body>
 </html>
