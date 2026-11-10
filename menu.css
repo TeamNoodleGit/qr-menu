@@ -20,7 +20,7 @@ button[aria-pressed="true"] { background: #203a30; border-color: #203a30; color:
 #status:empty { display: none; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1rem; padding-bottom: 2rem; }
 .card { min-width: 0; border: 1px solid #e0d4c4; border-radius: 1rem; overflow: hidden; background: #fffdf8; overflow-wrap: anywhere; }
-.card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block; background: #eae0cf; }
+.card img { width: min(70%, 13rem); aspect-ratio: 1; border-radius: 50%; margin: 1.25rem auto 0; object-fit: cover; display: block; background: #eae0cf; }
 .details { padding: 1rem; }
 .details h2 { margin: .4rem 0; font-size: 1.35rem; }
 .details p { margin: .5rem 0; line-height: 1.5; }
