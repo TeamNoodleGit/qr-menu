@@ -23,6 +23,9 @@
     ],
     "image": "/images/tea.svg",
     "soldOut": false,
+    "description": {
+      "ko": "낙지로 만든 젓갈입니다."
+    },
     "origin": {
       "ko": "중국산",
       "en": "China",
