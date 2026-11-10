@@ -61,7 +61,27 @@ main.wrap { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
 .language-picker summary::-webkit-details-marker { display: none; }
 .language-picker summary img { border-radius: 2px; }
 .language-picker[open] summary span { transform: rotate(180deg); }
-.language-picker .languages { position: absolute; bottom: calc(100% + .6rem); right: 0; display: grid; grid-template-columns: repeat(2, 46px); padding: .5rem; border: 1px solid var(--border); border-radius: .65rem; background: #fffaf3; box-shadow: 0 3px 14px #49301d25; }
+.language-picker .languages { position: absolute; bottom: calc(100% + .6rem); right: 0; display: grid; grid-template-columns: 46px; padding: .5rem; border: 1px solid var(--border); border-radius: .65rem; background: #fffaf3; box-shadow: 0 3px 14px #49301d25; }
 .card::before, .detail-card::before { content: ""; position: absolute; inset: 5px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(24%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(0%2024)%20scale(1%20-1)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(24%2024)%20scale(-1%20-1)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); background-position: left top, right top, left bottom, right bottom; background-size: 19px 19px; background-repeat: no-repeat; pointer-events: none; }
 .card { padding-top: 1rem; }
 .detail-card { position: relative; padding: 1.25rem 1rem; border: 1px solid var(--border); border-radius: .5rem; }
+
+.language-picker .languages { right: 50%; transform: translateX(50%); transform-origin: bottom center; }
+.language-picker[open] .languages { animation: language-rise .22s ease-out both; }
+.language-picker[open] .languages button { animation: language-item-rise .25s ease-out both; }
+.language-picker[open] .languages button:nth-child(1) { animation-delay: .12s; }
+.language-picker[open] .languages button:nth-child(2) { animation-delay: .08s; }
+.language-picker[open] .languages button:nth-child(3) { animation-delay: .04s; }
+.language-picker summary span { transition: transform .2s ease; }
+@keyframes language-rise {
+  from { opacity: 0; transform: translate(50%, 12px) scaleY(.85); }
+  to { opacity: 1; transform: translate(50%, 0) scaleY(1); }
+}
+@keyframes language-item-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .language-picker[open] .languages, .language-picker[open] .languages button { animation: none; }
+  .language-picker summary span { transition: none; }
+}
