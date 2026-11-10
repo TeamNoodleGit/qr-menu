@@ -72,7 +72,7 @@ function render() {
   renderStore();
   document.querySelector('#title').textContent = title;
   document.querySelector('#language-toggle').setAttribute('aria-label', label);
-  document.querySelector('#current-language').src = './flags/' + locale + '.svg';
+  document.querySelector('#current-language').src = './flags/' + locale + '.svg?v=us';
   renderPage();
   languages.setAttribute('aria-label', label);
   for (const button of languageButtons) {
@@ -151,7 +151,7 @@ function render() {
       }
       if (item.soldOut) details.append(element('span', soldOut, 'badge'));
       article.append(details);
-      const open = element('button', uiLabels[locale][0], 'card-open');
+      const open = element('button', '', 'card-open');
       open.type = 'button';
       open.setAttribute('aria-label', name + ' · ' + uiLabels[locale][0]);
       open.setAttribute('aria-haspopup', 'dialog');
