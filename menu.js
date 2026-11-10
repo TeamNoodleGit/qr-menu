@@ -71,7 +71,8 @@ function render() {
   document.querySelector('#brand').textContent = brand;
   renderStore();
   document.querySelector('#title').textContent = title;
-  document.querySelector('#intro').textContent = localized(store.intro);
+  document.querySelector('#language-toggle').setAttribute('aria-label', label);
+  document.querySelector('#current-language').src = './flags/' + locale + '.svg';
   renderPage();
   languages.setAttribute('aria-label', label);
   for (const button of languageButtons) {
@@ -203,6 +204,7 @@ function renderPage() {
   status.hidden = isStore;
 }
 window.addEventListener('hashchange', () => {
+  document.querySelector('#language-picker').open = false;
   renderPage();
   window.scrollTo({ top: 0, behavior: 'instant' });
 });
@@ -223,6 +225,8 @@ loadStore();
 for (const button of languageButtons) {
   button.addEventListener('click', () => {
     locale = button.dataset.locale;
+    document.querySelector('#language-picker').open = false;
+    document.querySelector('#language-toggle').focus();
     try {
       localStorage.setItem(languageKey, locale);
     } catch {

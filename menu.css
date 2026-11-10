@@ -4,13 +4,12 @@
 body { margin: 0; }
 body:has(dialog[open]) { overflow: hidden; }
 .wrap { width: min(100% - 1.5rem, 64rem); margin-inline: auto; }
-.hero { padding: 1.25rem 0 1rem; text-align: center; border-bottom: 1px solid var(--border); }
+.hero { padding: .6rem 0 .3rem; text-align: center; border-bottom: 1px solid var(--border); }
 .top { display: flex; flex-direction: column; align-items: center; gap: .85rem; }
-.brand { width: min(100%, 371px); }
+.brand { width: min(82%, 300px); }
 .brand-logo { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
-#brand { display: block; font-size: .8rem; margin-top: .25rem; }
-h1 { font-family: Georgia, serif; font-size: 1.3rem; margin: .9rem 0 .25rem; }
-.hero p { margin: 0; color: #68594b; font-size: .9rem; }
+#brand { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+h1 { font-family: Georgia, serif; font-size: 1.3rem; margin: .25rem 0; }
 button, .store-link, .back-link { font: inherit; min-height: 44px; }
 button { cursor: pointer; color: inherit; }
 a { color: var(--accent); }
@@ -52,3 +51,17 @@ dialog::backdrop { background: #23170ed0; }
 .store-row p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; margin: .35rem 0; }
 @media (min-width: 700px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; } .card { padding: 1rem; } .price-row { font-size: 1rem; } }
 @media (max-width: 340px) { .grid { grid-template-columns: 1fr; } }
+
+main.wrap { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+.floating-tools { position: fixed; right: max(.75rem, env(safe-area-inset-right)); bottom: calc(.75rem + env(safe-area-inset-bottom)); z-index: 5; display: flex; gap: .5rem; align-items: center; }
+.floating-tools .store-link, .language-picker summary { margin: 0; min-height: 48px; border: 1px solid var(--accent); border-radius: 2rem; background: #fffaf3; box-shadow: 0 3px 14px #49301d25; }
+.floating-tools .store-link { max-width: 13rem; text-align: center; }
+.language-picker { position: relative; }
+.language-picker summary { display: flex; align-items: center; justify-content: center; gap: .4rem; min-width: 70px; padding: .6rem .8rem; cursor: pointer; list-style: none; }
+.language-picker summary::-webkit-details-marker { display: none; }
+.language-picker summary img { border-radius: 2px; }
+.language-picker[open] summary span { transform: rotate(180deg); }
+.language-picker .languages { position: absolute; bottom: calc(100% + .6rem); right: 0; display: grid; grid-template-columns: repeat(2, 46px); padding: .5rem; border: 1px solid var(--border); border-radius: .65rem; background: #fffaf3; box-shadow: 0 3px 14px #49301d25; }
+.card::before, .detail-card::before { content: ""; position: absolute; inset: 5px; background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(24%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(0%2024)%20scale(1%20-1)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"), url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cg%20transform%3D%22translate(24%2024)%20scale(-1%20-1)%22%20fill%3D%22none%22%20stroke%3D%22%23b88d68%22%20stroke-width%3D%22.9%22%3E%3Cpath%20d%3D%22M2%2022V2h20M7%2017V7h10v10H7M2%2012h10V2%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"); background-position: left top, right top, left bottom, right bottom; background-size: 19px 19px; background-repeat: no-repeat; pointer-events: none; }
+.card { padding-top: 1rem; }
+.detail-card { position: relative; padding: 1.25rem 1rem; border: 1px solid var(--border); border-radius: .5rem; }
