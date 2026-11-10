@@ -194,5 +194,8 @@ content:
             label: 중국어 간체
             type: text
       - name: phone
-        label: 전화번호
+        label: 가게 전화번호
+        type: string
+      - name: mobile
+        label: 휴대폰 번호
         type: string

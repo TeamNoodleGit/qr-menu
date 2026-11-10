@@ -12,10 +12,10 @@ const categoryLabels = {
   'zh-CN': ['海鲜酱', '小菜', '泡菜', '面食', '饮品'],
 };
 const infoLabels = {
-  ko: ['가게 정보', '주소', '영업시간 및 휴무', '전화', '안내', '가격 문의', '원산지'],
-  en: ['Store information', 'Address', 'Hours', 'Phone', 'Notice', 'Ask for price', 'Origin'],
-  ja: ['店舗情報', '住所', '営業時間・定休日', '電話', 'お知らせ', '価格はお問い合わせください', '原産地'],
-  'zh-CN': ['店铺信息', '地址', '营业时间及休息日', '电话', '公告', '价格请咨询', '原产地'],
+  ko: ['가게 정보', '주소', '영업시간 및 휴무', '가게 전화번호', '안내', '가격 문의', '원산지'],
+  en: ['Store information', 'Address', 'Hours', 'Store phone', 'Notice', 'Ask for price', 'Origin'],
+  ja: ['店舗情報', '住所', '営業時間・定休日', '店舗電話', 'お知らせ', '価格はお問い合わせください', '原産地'],
+  'zh-CN': ['店铺信息', '地址', '营业时间及休息日', '店铺电话', '公告', '价格请咨询', '原产地'],
 };
 const uiLabels = {
   ko: ['자세히 보기', '닫기', '메뉴로 돌아가기', '가게 정보가 아직 등록되지 않았습니다.'],
@@ -174,14 +174,15 @@ function render() {
 function renderStore() {
   const section = document.querySelector('#store');
   section.replaceChildren();
-  const labels = infoLabels[locale];
+  const mobileLabels = { ko: '휴대폰 번호', en: 'Mobile phone', ja: '携帯電話', 'zh-CN': '手机号码' };
+  const labels = [...infoLabels[locale], mobileLabels[locale]];
   section.append(element('h2', labels[0]));
-  for (const [index, key] of [[1, 'address'], [2, 'hours'], [3, 'phone'], [4, 'notice']]) {
+  for (const [index, key] of [[1, 'address'], [2, 'hours'], [3, 'phone'], [7, 'mobile'], [4, 'notice']]) {
     const value = localized(store[key]);
     if (!value.trim()) continue;
     const row = element('div', '', 'store-row');
     const content = element('p', value);
-    if (key === 'phone' && /^[+0-9()\s-]+$/.test(value)) {
+    if ((key === 'phone' || key === 'mobile') && /^[+0-9()\s-]+$/.test(value)) {
       const call = element('a', value);
       call.href = 'tel:' + value.replace(/[^+0-9]/g, '');
       content.replaceChildren(call);
