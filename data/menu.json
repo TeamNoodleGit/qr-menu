@@ -15,6 +15,10 @@
       {
         "weight": "500g",
         "price": 12000
+      },
+      {
+        "weight": "100g",
+        "price": 99999999
       }
     ],
     "image": "/images/tea.svg",
