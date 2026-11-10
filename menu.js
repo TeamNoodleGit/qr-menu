@@ -94,10 +94,16 @@ function render() {
 
   function renderItems(selection) {
     const money = new Intl.NumberFormat(locale, { style: 'currency', currency: 'KRW' });
+    const formatPrice = value => locale === 'ko'
+      ? new Intl.NumberFormat('ko-KR').format(value) + '원'
+      : money.format(value);
     menu.replaceChildren();
     for (const item of selection) {
       const article = element('article', '', 'card');
       const name = localized(item.name);
+      const photoLabels = { ko: '사진 준비 중', en: 'Photo coming soon', ja: '写真準備中', 'zh-CN': '图片准备中' };
+      const photoFrame = element('div', photoLabels[locale], 'menu-photo');
+      article.append(photoFrame);
       if (typeof item.image === 'string' && /^\/?images\//.test(item.image)) {
         const photo = new URL(item.image.replace(/^\//, ''), import.meta.url);
         const imageRoot = new URL('./images/', import.meta.url);
@@ -107,7 +113,7 @@ function render() {
           img.loading = 'lazy';
           img.addEventListener('error', () => img.remove());
           img.src = photo.href;
-          article.append(img);
+          photoFrame.append(img);
         }
       }
       const details = element('div', '', 'details');
@@ -118,19 +124,20 @@ function render() {
       for (const option of available) {
         const row = element('p', '', 'price-row');
         const upper = validPrice(option.maxPrice) && option.maxPrice > option.price
-          ? ' – ' + money.format(option.maxPrice) : '';
-        row.append(element('span', option.weight || ''), element('strong', money.format(option.price) + upper));
+          ? ' – ' + formatPrice(option.maxPrice) : '';
+        row.append(element('span', option.weight || ''), element('strong', formatPrice(option.price) + upper));
         price.append(row);
       }
       if (!available.length) {
-        price.append(element('strong', validPrice(item.price) ? money.format(item.price) : infoLabels[locale][5]));
+        price.append(element('strong', validPrice(item.price) ? formatPrice(item.price) : infoLabels[locale][5]));
       }
       details.append(
-        element('span', categoryNames[categories.indexOf(item.category)], 'category'),
         element('h2', name),
-        element('p', localized(item.description)),
         price
       );
+      if (localized(item.description)) {
+        details.append(element('p', localized(item.description), 'description'));
+      }
       if (localized(item.origin)) {
         details.append(element('p', infoLabels[locale][6] + ' · ' + localized(item.origin), 'origin'));
       }
