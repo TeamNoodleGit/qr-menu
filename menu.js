@@ -60,7 +60,7 @@ function render() {
   const [title, intro, label, categoryLabel, all, soldOut, empty, error] = copy[locale];
   const categoryNames = categoryLabels[locale];
   document.documentElement.lang = locale;
-  const brand = localized(store.name) || '현종키친';
+  const brand = localized(store.name) || '서비의 전통 맛 젓갈';
   document.title = brand + ' · ' + title;
   document.querySelector('#brand').textContent = brand;
   renderStore();
