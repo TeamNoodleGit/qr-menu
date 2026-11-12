@@ -70,11 +70,11 @@
       }
     ],
     "soldOut": false,
-    "origin": {
-      "ko": "미국산",
-      "en": "USA",
-      "ja": "アメリカ産",
-      "zh-CN": "美国"
+    "description": {
+      "ko": "오징어 전체적인 부위가 들어가 있습니다.",
+      "en": "It contains the whole squid.",
+      "ja": "イカの全体的な部位が入っています。",
+      "zh-CN": "包含鱿鱼的整体部位。"
     }
   },
   {
