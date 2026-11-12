@@ -3,9 +3,9 @@
     "category": "jeotgal",
     "name": {
       "ko": "낙지젓갈",
-      "en": "Seasoned octopus",
-      "ja": "テナガダコの塩辛",
-      "zh-CN": "调味长腕章鱼酱"
+      "en": "Octopus",
+      "ja": "タコ",
+      "zh-CN": "章鱼"
     },
     "prices": [
       {
@@ -15,10 +15,6 @@
       {
         "weight": "500g",
         "price": 12000
-      },
-      {
-        "weight": "100g",
-        "price": 99999999
       }
     ],
     "image": "/images/tea.svg",
