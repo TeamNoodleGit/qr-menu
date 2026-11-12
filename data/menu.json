@@ -17,30 +17,26 @@
         "price": 12000
       }
     ],
-    "image": "/images/tea.svg",
     "soldOut": false,
     "description": {
-      "ko": "낙지로 만든 젓갈입니다."
-    },
-    "origin": {
-      "ko": "중국산",
-      "en": "China",
-      "ja": "中国産",
-      "zh-CN": "中国"
+      "ko": "낙지로 만든 젓갈입니다.",
+      "en": "This is salted fermented octopus.",
+      "ja": "タコで作った塩辛です。",
+      "zh-CN": "这是用章鱼制成的鱼酱。"
     }
   },
   {
     "category": "jeotgal",
     "name": {
-      "ko": "오징어젓갈",
-      "en": "Seasoned squid",
-      "ja": "イカの塩辛",
-      "zh-CN": "调味鱿鱼酱"
+      "ko": "오징어젓갈 (몸통만)",
+      "en": "Squid",
+      "ja": "イカ",
+      "zh-CN": "鱿鱼"
     },
     "prices": [
       {
         "weight": "1kg",
-        "price": 12000
+        "price": 30000
       },
       {
         "weight": "500g",
