@@ -44,25 +44,25 @@
       }
     ],
     "soldOut": false,
-    "origin": {
-      "ko": "중국산",
-      "en": "China",
-      "ja": "中国産",
-      "zh-CN": "中国"
+    "description": {
+      "ko": "오징어 몸통으로만 만든 젓갈입니다. ",
+      "en": "This is a salted fermented seafood product made solely from a squid’s body.",
+      "ja": "イカの胴体だけで作った塩辛です。",
+      "zh-CN": "这是只用鱿鱼身体制作的酱菜。"
     }
   },
   {
     "category": "jeotgal",
     "name": {
-      "ko": "창란젓갈",
-      "en": "Seasoned pollock intestines",
-      "ja": "スケトウダラの内臓の塩辛",
-      "zh-CN": "调味明太鱼肠酱"
+      "ko": "오징어젓갈 (전체)",
+      "en": "Salted Squid (whole)",
+      "ja": "イカの塩辛（全体）",
+      "zh-CN": "鱿鱼盐渍（全部）"
     },
     "prices": [
       {
         "weight": "1kg",
-        "price": 26000
+        "price": 22000
       },
       {
         "weight": "500g",
