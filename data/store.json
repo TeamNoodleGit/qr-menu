@@ -23,6 +23,12 @@
     "ja": "午前7時～午後5時、毎週日曜日定休日",
     "zh-CN": "上午7点至下午5点，每周日休息"
   },
-  "phone": "02 12345678",
-  "mobile": "+82 01012345678"
+  "notice": {
+    "ko": "LINE iD : pomi1111\n\n젓갈류 보관 방법 \n젓갈은 가지고 가셔서 일주일 치 드실것만 냉장고에 두시고 소분 후 냉동 보관 하시다가 \n드실때는 하나씩 꺼내서 냉장고에서 해동 후 드시면 오래 보관 가능합니다 (최대 1년) ",
+    "en": "LINE iD : pomi1111\n\nHow to Store Salted Seafood \nTake the salted fermented seafood and keep just enough for a week in the fridge, then portion it out and store it in the freezer \nWhen eating, take one out and thaw in the refrigerator before consuming for long-term storage (up to 1 year)",
+    "ja": "LINE iD : pomi1111\n\n魚醤類の保存方法 \nチョッカルはお持ち帰りいただき、1週間分をお召し上がりになる分だけ冷蔵庫に保管し、小分けにして冷凍保存しておいて \nお召し上がりの際は、1つずつ取り出して冷蔵庫で解凍してからお召し上がりいただくと、長期間保存可能です（最大1年）",
+    "zh-CN": "LINE iD : pomi1111\n\n酱菜类的保存方法 \n腌菜请带去，只放冰箱里保存一周的量，分装后冷冻保存。 \n食用时请逐个取出，在冰箱中解冻后食用，可长时间保存（最长1年）。"
+  },
+  "phone": "02-2275-8843",
+  "mobile": "+82 01023565843"
 }
