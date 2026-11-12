@@ -56,8 +56,8 @@
     "name": {
       "ko": "오징어젓갈 (전체)",
       "en": "Salted Squid (whole)",
-      "ja": "イカの塩辛（全体）",
-      "zh-CN": "鱿鱼盐渍（全部）"
+      "ja": "イカ",
+      "zh-CN": "鱿鱼"
     },
     "prices": [
       {
@@ -80,29 +80,27 @@
   {
     "category": "jeotgal",
     "name": {
-      "ko": "명란젓",
-      "en": "Salted pollock roe",
-      "ja": "明太子",
-      "zh-CN": "盐渍明太鱼籽"
+      "ko": "창란젓",
+      "en": "Salted fermented small squid and anchovy salad",
+      "ja": "チャンラン塩辛",
+      "zh-CN": "明太鱼子酱"
     },
     "prices": [
       {
         "weight": "1kg",
-        "price": 13000,
-        "maxPrice": 14000
+        "price": 26000
       },
       {
         "weight": "500g",
-        "price": 6500,
-        "maxPrice": 7000
+        "price": 13000
       }
     ],
     "soldOut": false,
-    "origin": {
-      "ko": "러시아/미국산",
-      "en": "Russia / USA",
-      "ja": "ロシア・アメリカ産",
-      "zh-CN": "俄罗斯／美国"
+    "description": {
+      "ko": "창란젓갈 ",
+      "en": "This is salted fermented fish made from pollock intestines.",
+      "ja": "スケトウダラの腸で作った塩辛です。",
+      "zh-CN": "这是用鳕鱼肠制成的鱼酱。"
     }
   },
   {
